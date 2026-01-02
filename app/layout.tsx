@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Footer from "./components/Footer/Footer";
+import Topbar from "./components/Topbar/Topbar";
+import Navbar from "./components/Navbar/Navbar";
+import { Suspense } from "react";
+import Loading from "./loading";
+import ScrollIndicator from "./components/Utils/ScrollIndicator/ScrollIndicator";
+import PurpleBubble from "./components/Utils/Bubbles/Purple";
+import BlueBubble from "./components/Utils/Bubbles/Blue";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +35,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Topbar />
+        <ScrollIndicator />
+        {/* <Suspense fallback={<Loading />}>{children}</Suspense> */}
         {children}
+        <div className="hidden md:flex">
+          <PurpleBubble />
+          <BlueBubble />
+        </div>
+        <Navbar />
+        <Footer />
       </body>
     </html>
   );

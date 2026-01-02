@@ -1,0 +1,18 @@
+import Image from "next/image";
+import React from "react";
+
+type TagsProps = {
+  src: string;
+  children: React.ReactNode;
+};
+
+const Tags = ({ src, children }: TagsProps) => {
+  return (
+    <div className="transition-border ease flex h-10 w-max items-center gap-2 rounded-md border-2 border-gray-700 bg-black px-2 text-center duration-700 hover:border-white">
+      <Image src={src} alt="" width={25} height={25} />
+      <p className="text-white">{children}</p>
+    </div>
+  );
+};
+
+export default Tags;
