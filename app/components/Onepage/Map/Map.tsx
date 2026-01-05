@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import { MapPinHouse } from "lucide-react";
 
 const Map = () => {
   return (
@@ -13,13 +13,16 @@ const Map = () => {
         </p>
       </article>
       <div className="transition-rotate-x ease relative h-95 w-95 duration-500 transform-3d group-hover:rotate-x-50 group-hover:-rotate-z-20 md:h-200 md:w-200">
-        <div className="ease absolute left-45 z-50 transition-all duration-500 transform-3d group-hover:-translate-x-5 group-hover:translate-y-20 group-hover:translate-z-30 group-hover:-rotate-x-50 md:top-35 md:left-90">
-          <p className="border-b-2 border-black text-black">France / Sarthe</p>
+        <div className="ease absolute left-45 z-50 flex flex-row transition-all duration-500 transform-3d group-hover:-translate-x-5 group-hover:translate-y-20 group-hover:translate-z-30 group-hover:-rotate-x-50 md:top-35 md:left-90">
+          <MapPinHouse className="shrink-0 text-(--secondary) md:text-black" />
+          <p className="border-b-3 border-(--secondary) text-(--secondary) md:border-black md:text-black">
+            France / Sarthe
+          </p>
           <div className="">
-            <div className="absolute top-6 left-10 h-5 w-1 bg-black" />
-            <div className="absolute top-10 -left-15 h-25 w-1 bg-black" />
-            <div className="absolute -top-2 -left-2 h-25 w-1 rotate-90 transform bg-black" />
-            <ul className="absolute top-13 -left-7 list-disc md:text-nowrap text-black">
+            <div className="absolute top-6 left-10 h-5 w-1 bg-(--secondary) md:bg-black" />
+            <div className="absolute top-10 -left-15 h-25 w-1 bg-(--secondary) md:bg-black" />
+            <div className="absolute -top-2 -left-2 h-25 w-1 rotate-90 transform bg-(--secondary) md:bg-black" />
+            <ul className="absolute top-13 -left-7 list-disc text-(--secondary) md:text-nowrap md:text-black">
               <li>Mobilité : Vélo, Train, Bus, Car</li>
               <li>Réseau : Fibre</li>
             </ul>

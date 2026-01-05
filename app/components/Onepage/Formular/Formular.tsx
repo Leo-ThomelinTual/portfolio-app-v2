@@ -1,6 +1,7 @@
 import React from "react";
 import Primary from "../../Utils/Buttons/Primary";
 import SocialBubble from "../../Utils/SocialBubble/SocialBubble";
+import { ArrowRight } from "lucide-react";
 
 const Formular = () => {
   return (
@@ -55,8 +56,10 @@ const Formular = () => {
             placeholder="Tapez votre message ici..."
           />
         </div>
-        <div className="self-end mt-auto">
-          <Primary href="/skills">Envoyer</Primary>
+        <div className="mt-auto self-end">
+          <Primary href="/skills">
+            Envoyer <ArrowRight />{" "}
+          </Primary>
         </div>
       </form>
       <div className="relative md:left-120">
