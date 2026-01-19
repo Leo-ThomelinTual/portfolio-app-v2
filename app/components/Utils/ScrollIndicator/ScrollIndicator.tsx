@@ -24,9 +24,9 @@ const ScrollIndicator = () => {
 
   return (
     <div className="fixed right-2 z-50">
-      <div className="fixed right-2 h-36 w-3 rounded-full border-2 border-(--border) bg-(--background)">
+      <div className="fixed right-2 h-36 w-3 rounded-full border-2 border-(--color-border) bg-(--color-background)">
         <div
-          className="w-full bg-(--secondary) shadow-[0px_0px_10px_5px_var(--secondary)] transition-all duration-75 ease-out"
+          className="w-full bg-(--color-secondary) shadow-[0px_0px_10px_5px_var(--color-secondary)] transition-all duration-75 ease-out"
           style={{ height: `${scroll}%` }}
         />
       </div>

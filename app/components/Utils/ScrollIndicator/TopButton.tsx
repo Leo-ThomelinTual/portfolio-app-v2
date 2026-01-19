@@ -19,7 +19,7 @@ const TopButton = () => {
   return (
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      className={`ease flex h-10 w-max items-center gap-1 rounded-md bg-(--primary) px-2 text-white shadow-white outline-2 outline-(--outline) transition-all duration-500 hover:bg-white hover:text-black hover:shadow-[0px_0px_10px_5px] hover:outline-offset-3 md:px-3 ${show ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-4 opacity-0"}`}
+      className={`ease flex h-10 w-max items-center gap-1 rounded-md bg-(--color-primary) px-2 text-(--color-foreground) outline-2 outline-(--color-outline) transition-all duration-500 hover:bg-(--color-foreground) hover:text-(--color-primary) hover:shadow-[0px_0px_10px_5px_var(--color-shadow)] hover:outline-offset-3 md:px-3 ${show ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-4 opacity-0"}`}
     >
       <p className="hidden md:flex">TOP</p> <ArrowUp />
     </button>

@@ -1,22 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --outline: royalblue;
-  --border: black;
-  --primary: midnightblue;
-  --secondary: royalblue;
+  --color-background: #0a0a0a;
+  --transparency-background: #0a0a0a40;
+  --color-foreground: #ededed;
+  --color-outline: royalblue;
+  --color-border: white;
+  --color-shadow: white;
+  --color-border-muted: gray;
+  --color-primary: midnightblue;
+  --color-secondary: royalblue;
 }
 
-/* @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-} */
-
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --background-transparent: #0a0a0a40;
@@ -25,14 +21,22 @@
   }
 }
 
-@media (prefers-color-scheme: white) {
+@media (prefers-color-scheme: light) {
   :root {
     --background: #ffffff;
-    --background: #ffffff40;
+    --background-transparent: #ffffff40;
     --foreground: #171717;
     --border: black;
   }
+} */
+
+/* .dark {
+  color-scheme: dark;
 }
+
+.light {
+  color-scheme: light;
+} */
 
 html,
 body {
@@ -42,24 +46,8 @@ body {
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-background);
+  color: var(--color-foreground);
   font-family: Arial, Helvetica, sans-serif;
   padding-block: 120px !important;
-}
-
-input,
-textarea {
-  border: 2px solid var(--border);
-  outline: 2px solid transparent;
-  outline-offset: 0px;
-  transition: outline-offset 0.4s ease border 0.6s ease outline 0.4 ease;
-}
-
-input:focus,
-textarea:focus {
-  border: 2px solid var(--secondary);
-  outline: 2px solid var(--primary);
-  outline-offset: 3px;
-  transition: outline-offset 0.4s ease border 0.6s ease outline 0.4s ease;
 }

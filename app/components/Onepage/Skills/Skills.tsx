@@ -3,9 +3,11 @@ import Tags from "../../Utils/Tags/Tags";
 
 const Skills = () => {
   return (
-    <div className="flex w-full flex-wrap gap-2 px-2 md:w-250 mx-auto">
+    <div className="mx-auto flex w-full flex-wrap gap-2 px-2 md:w-250">
       <Tags src="./nextjs_icon_dark.svg">NextJS</Tags>
       <Tags src="./nuxt.svg">NuxtJS</Tags>
+      <Tags src="./globe.svg">Docker</Tags>
+      <Tags src="./globe.svg">Git</Tags>
       <Tags src="./tailwindcss.svg">TailwindCSS</Tags>
       <Tags src="./html5.svg">HTML</Tags>
       <Tags src="./CSS.svg">CSS</Tags>

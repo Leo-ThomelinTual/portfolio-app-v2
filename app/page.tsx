@@ -12,7 +12,7 @@ export default function Home() {
       <WelcomeMessage />
       <AboutMe />
       <Skills />
-      <div className="flex flex-row flex-wrap items-center px-5 md:justify-between md:px-20">
+      <div className="flex flex-row flex-wrap items-center gap-3 px-5 md:justify-between md:px-20">
         <ProjectCard />
         <ProjectShowcase />
       </div>

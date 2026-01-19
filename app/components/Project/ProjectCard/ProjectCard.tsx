@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const ProjectCard = () => {
   return (
-    <article className="flex h-125 w-full flex-col justify-between rounded-md border-2 border-(--border) bg-(--background) p-2 md:w-96">
+    <article className="flex h-125 w-full flex-col justify-between rounded-md border-2 border-(--color-border) bg-(--color-background) p-2 md:w-96">
       <div className="flex items-center gap-1">
         <Image src="./globe.svg" alt="" width={25} height={25} />
         <h3 className="p-2 text-xl">ProductCard</h3>
