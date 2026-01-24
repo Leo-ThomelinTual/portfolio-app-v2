@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
+
 import "./globals.css";
 import Footer from "./components/Footer/Footer";
 // import Topbar from "./components/Topbar/Topbar";
@@ -12,15 +13,9 @@ import BlueBubble from "./components/Utils/Bubbles/Blue";
 import NavbarNew from "./components/Navbar/NavbarNew";
 import TopbarNew from "./components/Topbar/TopbarNew";
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+const jetbrains = JetBrains_Mono({
+  variable: "--jetbrains-mono",
+});
 
 export const metadata: Metadata = {
   title: "Léo - Web portfolio",
@@ -33,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html className={jetbrains.className} lang="fr">
       <body>
         {/*<Topbar />*/}
         <TopbarNew />
