@@ -9,21 +9,21 @@ const Social = () => {
         className="transition-scale ease duration-300 hover:scale-110"
         href="/"
       >
-        <Icon fontSize={25} icon="mdi:github" />
+        <Icon className="shrink-0" fontSize={25} icon="mdi:github" />
       </Link>
 
       <Link
         className="transition-scale ease duration-300 hover:scale-110"
         href="/"
       >
-        <Icon fontSize={25} icon="devicon:linkedin" />
+        <Icon className="shrink-0" fontSize={25} icon="devicon:linkedin" />
       </Link>
 
       <Link
         className="transition-scale ease duration-300 hover:scale-110"
         href="/"
       >
-        <Icon fontSize={25} icon="devicon:facebook" />
+        <Icon className="shrink-0" fontSize={25} icon="devicon:facebook" />
       </Link>
     </div>
   );
