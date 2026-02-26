@@ -2,16 +2,15 @@ import { JetBrains_Mono } from "next/font/google";
 import type { Metadata } from "next";
 
 import "./globals.css";
-import Footer from "./components/Footer/Footer";
-// import Topbar from "./components/Topbar/Topbar";
-// import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Common/UI/Footer/Footer";
+import Topbar from "./components/Common/UI/Topbar/Topbar";
+
 import { Suspense } from "react";
 import Loading from "./loading";
-import ScrollIndicator from "./components/Utils/ScrollIndicator/ScrollIndicator";
-import PurpleBubble from "./components/Utils/Bubbles/Purple";
-import BlueBubble from "./components/Utils/Bubbles/Blue";
-import NavbarNew from "./components/Navbar/NavbarNew";
-import TopbarNew from "./components/Topbar/TopbarNew";
+import ScrollIndicator from "./components/Common/Utils/ScrollIndicator/ScrollIndicator";
+import PurpleBubble from "./components/Common/Utils/Bubbles/Purple";
+import BlueBubble from "./components/Common/Utils/Bubbles/Blue";
+import Navbar from "./components/Common/UI/Navbar/Navbar";
 
 const jetbrains = JetBrains_Mono({
   variable: "--jetbrains-mono",
@@ -30,17 +29,17 @@ export default function RootLayout({
   return (
     <html className={jetbrains.className} lang="fr">
       <body>
-        {/*<Topbar />*/}
-        <TopbarNew />
+        <Topbar />
         <ScrollIndicator />
+
         <Suspense fallback={<Loading />}>{children}</Suspense>
-        {/* {children} */}
+
         <div className="hidden md:flex">
           <PurpleBubble />
           <BlueBubble />
         </div>
-        {/*<Navbar />*/}
-        <NavbarNew />
+
+        <Navbar />
         <Footer />
       </body>
     </html>

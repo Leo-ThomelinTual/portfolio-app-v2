@@ -1,5 +1,3 @@
-import React from "react";
-
 interface User {
   id: number;
   name: string;
@@ -12,10 +10,10 @@ const Skills = async () => {
   });
   const users: User[] = await res.json();
   return (
-    <div>
+    <>
+      <h1>Users</h1>
       Skills
-      <>
-        <h1>Users</h1>
+      <table>
         <thead>
           <tr>
             <th>Name</th>
@@ -30,9 +28,9 @@ const Skills = async () => {
             </tr>
           ))}
         </tbody>
-        <p> {new Date().toLocaleTimeString()}</p>
-      </>
-    </div>
+      </table>
+      <p> {new Date().toLocaleTimeString()}</p>
+    </>
   );
 };
 
