@@ -1,6 +1,5 @@
 import WelcomeMessage from "./components/Common/UI/Welcome/WelcomeMessage";
 import AboutMe from "./components/Common/UI/AboutMe/AboutMe";
-import Map from "./components/Common/UI/Map/Map";
 import Skills from "./components/Common/UI/Skills/Skills";
 import ProjectCard from "./components/Common/UI/ProjectCard/ProjectCard";
 import Tags from "./components/Common/Utils/Tags/Tags";
@@ -42,7 +41,7 @@ export default function Home() {
               imageSrc="/img/portfolio-v1.png"
               imageAlt="Image représentant la version 1 de mon portfolio"
               projectName="Portfolio V1"
-              href="https://leo-portfolio-wine.vercel.app/"
+              href="https://leo-portfoliov1.vercel.app/"
               projectDescription="La toute première version de mon portfolio."
               dateStart="2024"
               dateEnd="2025"
@@ -55,7 +54,7 @@ export default function Home() {
               imageSrc="/img/portfolio-v2.png"
               imageAlt="Image représentant la version 2 de mon portfolio"
               projectName="Portfolio V2 (Actuelle)"
-              href="https://leo-portfolioV2-wine.vercel.app/"
+              href="https://leo-portfoliov2.vercel.app/"
               projectDescription="La version 2 de mon portfolio celui ou vous êtes actuellement."
               dateStart="2025"
               dateEnd="20xx"

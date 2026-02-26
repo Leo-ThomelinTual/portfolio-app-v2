@@ -33,7 +33,10 @@ const Map = () => {
         <h2 className="content text-5xl font-extrabold text-nowrap uppercase md:text-6xl">
           Ma mobilités
         </h2>
-        <p className="content">J`habite proche du Mans et ma capacité de déplacement se situe en Pays de la loire grâce au train et bus.</p>
+        <p className="content">
+          J`habite proche du Mans et ma capacité de déplacement se situe en Pays
+          de la loire grâce au train et bus.
+        </p>
       </article>
       <div className="transition-rotate-x ease relative h-120 w-120 duration-500 transform-3d group-hover:rotate-x-50 group-hover:-rotate-z-20 md:h-200 md:w-200">
         <MapPinHouse className="absolute top-35 left-35 z-50 flex shrink-0 text-(--danger) md:hidden" />
