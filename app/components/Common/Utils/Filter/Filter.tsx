@@ -67,7 +67,7 @@ const Filter = () => {
         <Icon icon="material-symbols:filter-list" />
       </article>
       <article className="flex flex-wrap gap-1">
-        <Next onClick={filterList} id="excluder" />
+        {/* <Next onClick={filterList} id="excluder" /> */}
       </article>
     </section>
   );
