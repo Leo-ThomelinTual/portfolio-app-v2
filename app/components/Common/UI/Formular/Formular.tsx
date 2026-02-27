@@ -1,7 +1,7 @@
 import React from "react";
 import Primary from "../../Utils/Buttons/Primary";
 import SocialBubble from "../../Utils/SocialBubble/SocialBubble";
-import { ArrowRight } from "lucide-react";
+import { Icon } from "@iconify/react";
 
 const Formular = () => {
   return (
@@ -58,7 +58,7 @@ const Formular = () => {
         </div>
         <div className="self-end">
           <Primary href="/skills">
-            Envoyer <ArrowRight />
+            Envoyer <Icon icon="mdi:arrow-right" />
           </Primary>
         </div>
       </form>
