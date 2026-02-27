@@ -10,8 +10,9 @@ type TertiaryProps = {
 const Tertiary = ({ href, children }: TertiaryProps) => {
   return (
     <Link
+      onClick={undefined}
       href={href}
-      className="ease flex h-10 w-max items-center gap-3 rounded-md bg-transparent px-3 shadow-white outline-2 outline-(--color-foreground) transition-all duration-500 hover:text-(--color-foreground) hover:shadow-[0px_0px_10px_5px] hover:outline-offset-3"
+      className="ease flex h-10 w-max items-center gap-3 rounded-md bg-transparent px-3 shadow-white outline-2 outline-(--color-foreground) transition-all duration-300 hover:text-(--color-foreground) hover:shadow-[0px_0px_10px_5px] hover:outline-offset-3"
     >
       {children}
     </Link>

@@ -2,8 +2,14 @@ import WelcomeMessage from "./components/Common/UI/Welcome/WelcomeMessage";
 import AboutMe from "./components/Common/UI/AboutMe/AboutMe";
 import Skills from "./components/Common/UI/Skills/Skills";
 import ProjectCard from "./components/Common/UI/ProjectCard/ProjectCard";
-import Tags from "./components/Common/Utils/Tags/Tags";
 import { Analytics } from "@vercel/analytics/next";
+import TailwindCSS from "./components/Common/Utils/Tags/Tailwindcss";
+import Nuxt from "./components/Common/Utils/Tags/Nuxt";
+import Next from "./components/Common/Utils/Tags/Next";
+import Personnel from "./components/Common/Utils/Tags/Personnel";
+import Filter from "./components/Common/Utils/Filter/Filter";
+import Typescript from "./components/Common/Utils/Tags/Typescript";
+import Symfony from "./components/Common/Utils/Tags/Symfony";
 
 export default function Home() {
   // TODO Create project filter
@@ -23,19 +29,23 @@ export default function Home() {
             - Mes projects -
           </h2>
 
+          {/* <Filter /> */}
+
           <div className="flex flex-wrap justify-center gap-5">
             <ProjectCard
-              imageSrc="/img/fluxrss.png"
+              imageSrc="/img/MyWebGames.png"
               imageAlt="Image représentant mon project"
-              projectName="FluxRSS"
-              href="https://github.com/Leo-ThomelinTual/FluxRSS"
-              projectDescription="Le but de ce projet est de me construire en flux rss customiser autant par le contenu que par l'interface me permettant d'avoir le contrôle total sur qu'elle information j'ai besoin ou qu'elle contenu priorisé."
+              projectName="MMOType & Pong"
+              href="https://github.com/Leo-ThomelinTual/my-web-games"
+              projectDescription="Ce projet regroupe un jeux de pong et un jeu ou il faut taper des commandes précise pour récupérer des ressources et bien d'autre fonctionnalité à venir. Ce travail actuellement sur ce projet, l'image de preview ci-dessus viens de l'ancienne version avec le Framework Nuxt je suis en train de réécrire le code avec NextJS, Typescript et Symfony pour les données."
               dateStart="2025"
-              dateEnd="2026"
+              dateEnd="20xx"
             >
-              <Tags icon="devicon:tailwindcss">TailwindCSS</Tags>
-              <Tags icon="devicon:nuxt">NuxtJS</Tags>
-              <Tags icon="material-symbols:account-circle">Personnel</Tags>
+              <TailwindCSS />
+              <Typescript />
+              <Symfony />
+              <Next />
+              <Personnel />
             </ProjectCard>
             <ProjectCard
               imageSrc="/img/portfolio-v1.png"
@@ -46,9 +56,9 @@ export default function Home() {
               dateStart="2024"
               dateEnd="2025"
             >
-              <Tags icon="devicon:tailwindcss">TailwindCSS</Tags>
-              <Tags icon="devicon:nuxt">NuxtJS</Tags>
-              <Tags icon="material-symbols:account-circle">Personnel</Tags>
+              <TailwindCSS />
+              <Nuxt />
+              <Personnel />
             </ProjectCard>
             <ProjectCard
               imageSrc="/img/portfolio-v2.png"
@@ -59,9 +69,9 @@ export default function Home() {
               dateStart="2025"
               dateEnd="20xx"
             >
-              <Tags icon="devicon:tailwindcss">TailwindCSS</Tags>
-              <Tags icon="devicon:nextjs">NextJS</Tags>
-              <Tags icon="material-symbols:account-circle">Personnel</Tags>
+              <TailwindCSS />
+              <Next />
+              <Personnel />
             </ProjectCard>
           </div>
         </div>

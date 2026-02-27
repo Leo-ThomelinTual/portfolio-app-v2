@@ -32,11 +32,9 @@ const ProjectCard = ({
     <div
       className={`${styles.case} group relative flex w-97.5 flex-col gap-2 overflow-hidden rounded-xl border-2 border-(--color-border-muted) bg-(--transparency-background) p-3 hover:border-white md:w-112.5 md:gap-5 md:p-5`}
     >
-      <div className="relative h-55 w-full">
-        <Link href={href}>
-          <Image src={imageSrc} alt={imageAlt} fill />
-        </Link>
-      </div>
+      <Link className="relative h-55 w-full" href={href}>
+        <Image src={imageSrc} alt={imageAlt} fill />
+      </Link>
 
       {/* Link display for Mobile   */}
       <div className="flex w-max gap-3 rounded-md bg-(--transparency-background) p-1 lg:hidden"></div>
