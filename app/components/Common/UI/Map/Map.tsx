@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
-import { MapPinHouse } from "lucide-react";
 import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger } from "gsap/all";
+import { Icon } from "@iconify/react";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -39,9 +39,15 @@ const Map = () => {
         </p>
       </article>
       <div className="transition-rotate-x ease relative h-120 w-120 duration-500 transform-3d group-hover:rotate-x-50 group-hover:-rotate-z-20 md:h-200 md:w-200">
-        <MapPinHouse className="absolute top-35 left-35 z-50 flex shrink-0 text-(--danger) md:hidden" />
+        <Icon
+          icon="mdi:map-marker"
+          className="absolute top-35 left-35 z-50 flex shrink-0 text-(--danger) md:hidden"
+        />
         <div className="ease absolute top-35 left-85 z-50 hidden flex-row transition-all duration-500 transform-3d group-hover:-translate-x-5 group-hover:translate-y-20 group-hover:translate-z-30 group-hover:-rotate-x-50 md:flex">
-          <MapPinHouse className="shrink-0 text-(--color-background)" />
+          <Icon
+            icon="mdi:map-marker"
+            className="shrink-0 text-(--color-background)"
+          />
           <p className="border-b-3 border-(--color-background) text-(--color-background)">
             Pays de la loire / Le Mans
           </p>
