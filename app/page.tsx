@@ -33,21 +33,6 @@ export default function Home() {
 
           <div className="flex flex-wrap justify-center gap-5">
             <ProjectCard
-              imageSrc="/img/MyWebGames.png"
-              imageAlt="Image représentant mon project"
-              projectName="MMOType & Pong"
-              href="https://github.com/Leo-ThomelinTual/my-web-games"
-              projectDescription="Ce projet regroupe un jeux de pong et un jeu ou il faut taper des commandes précise pour récupérer des ressources et bien d'autre fonctionnalité à venir. Ce travail actuellement sur ce projet, l'image de preview ci-dessus viens de l'ancienne version avec le Framework Nuxt je suis en train de réécrire le code avec NextJS, Typescript et Symfony pour les données."
-              dateStart="2025"
-              dateEnd="20xx"
-            >
-              <TailwindCSS />
-              <Typescript />
-              <Symfony />
-              <Next />
-              <Personnel />
-            </ProjectCard>
-            <ProjectCard
               imageSrc="/img/portfolio-v1.png"
               imageAlt="Image représentant la version 1 de mon portfolio"
               projectName="Portfolio V1"
@@ -61,11 +46,26 @@ export default function Home() {
               <Personnel />
             </ProjectCard>
             <ProjectCard
+              imageSrc="/img/MyWebGames.png"
+              imageAlt="Image représentant mon project"
+              projectName="MMOType & Pong"
+              href="https://github.com/Leo-ThomelinTual/my-web-games"
+              projectDescription="Ce projet regroupe un jeu de pong et un jeu où il faut taper des commandes précises pour récupérer des ressources et bien d'autres fonctionnalités à venir. Je travail actuellement sur ce projet, l'image de preview ci-dessus vient de l'ancienne version avec le Framework Nuxt je suis en train de réécrire le code avec NextJS, Typescript et Symfony pour les données."
+              dateStart="2025"
+              dateEnd="20xx"
+            >
+              <TailwindCSS />
+              <Typescript />
+              <Symfony />
+              <Next />
+              <Personnel />
+            </ProjectCard>
+            <ProjectCard
               imageSrc="/img/portfolio-v2.png"
               imageAlt="Image représentant la version 2 de mon portfolio"
               projectName="Portfolio V2 (Actuelle)"
               href="https://leo-portfolio-v2.vercel.app/"
-              projectDescription="La version 2 de mon portfolio celui ou vous êtes actuellement."
+              projectDescription="La version 2 de mon portfolio celui où vous êtes actuellement."
               dateStart="2025"
               dateEnd="20xx"
             >
