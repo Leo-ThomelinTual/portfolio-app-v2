@@ -1,6 +1,5 @@
 "use client";
-import React from "react";
-import { Sun, Moon } from "lucide-react";
+import { Icon } from "@iconify/react";
 
 const DayNight = () => {
   // const storageKey = "theme-preference";
@@ -61,7 +60,7 @@ const DayNight = () => {
           // }}
           className="cursor-pointer rounded-full"
         >
-          <Sun />
+          <Icon icon="ant-design:sun-filled" />
         </button>
         <button
           // onClick={() => {
@@ -70,7 +69,7 @@ const DayNight = () => {
           // }}
           className="cursor-pointer rounded-full"
         >
-          <Moon />
+          <Icon icon="ant-design:moon-filled" />
         </button>
       </div>
     </div>
