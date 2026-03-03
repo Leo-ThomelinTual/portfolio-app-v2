@@ -67,32 +67,34 @@ const WelcomeMessage = () => {
 
   return (
     <section className="relative flex h-screen w-full flex-col justify-center gap-30">
-      <article className="mx-auto flex flex-col">
-        <div
-          ref={titleContainer}
-          className="flex w-full flex-col uppercase select-none"
-        >
-          <h3 className="title text-4xl font-extrabold uppercase">
+      <article ref={titleContainer} className="mx-auto flex flex-col uppercase">
+        <div className="flex w-full flex-col px-10 md:px-0">
+          <h3 className="title text-3xl font-extrabold md:text-4xl">
             👋 Léo Thomelin-Tual
           </h3>
           <p className="flex items-center gap-3">
-            <Icon icon="material-symbols:location-on-outline-rounded" />
+            <Icon
+              className="shrink-0"
+              icon="material-symbols:location-on-outline-rounded"
+            />
             Basé à Sarthe/Lombron - Mobile Pays de la loire / Ouvert au
             télétravail
           </p>
-          <h2 className="titleWiggle titleFrontend title text-[4em] font-extrabold text-(--color-primary) lg:text-[10em] xl:text-[15em]">
+        </div>
+        <div className="relative flex w-max flex-col self-center font-extrabold">
+          <h2 className="titleWiggle titleFrontend title text-[4em] text-(--color-primary) lg:text-[10em] xl:text-[15em]">
             Je suis
           </h2>
-          <h2 className="titleWiggle title text-[4em]/[2rem] font-extrabold lg:text-[8em]/[2rem] xl:text-[15em]/[3rem]">
+          <h2 className="titleWiggle title text-[4em]/[2rem] lg:text-[8em]/[2rem] xl:text-[15em]/[3rem]">
             Développeur
           </h2>
-          <h3 className="title titleWiggle self-end text-[2.5em]/[2rem] font-extrabold text-(--color-secondary) lg:text-[4em]/[5rem] xl:text-[5rem]/[8rem]">
+          <h3 className="title titleWiggle self-end text-[2.5em]/[2rem] text-(--color-secondary) lg:text-[4em]/[5rem] xl:text-[5rem]/[8rem]">
             Junior
           </h3>
         </div>
       </article>
 
-      <article className="mx-10 flex flex-col gap-2 self-center text-justify md:w-1/3">
+      <article className="xs:w-1/3 mx-10 flex flex-col gap-2 self-center text-justify md:w-2/3">
         <p className="font-medium">
           &gt; <strong>Développeur web/mobile junior Bac+2</strong>, curieux et
           motivé, avec une forte capacité d`adaptation et un bon esprit

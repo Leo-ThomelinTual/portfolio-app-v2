@@ -1,4 +1,3 @@
-import React from "react";
 import Primary from "../../Utils/Buttons/Primary";
 import SocialBubble from "../../Utils/SocialBubble/SocialBubble";
 import { Icon } from "@iconify/react";

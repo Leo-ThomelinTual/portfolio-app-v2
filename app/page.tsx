@@ -1,26 +1,56 @@
+"use client";
 import WelcomeMessage from "./components/Common/UI/Welcome/WelcomeMessage";
 import AboutMe from "./components/Common/UI/AboutMe/AboutMe";
 import Skills from "./components/Common/UI/Skills/Skills";
 import ProjectCard from "./components/Common/UI/ProjectCard/ProjectCard";
 import { Analytics } from "@vercel/analytics/next";
-import TailwindCSS from "./components/Common/Utils/Tags/Tailwindcss";
-import Nuxt from "./components/Common/Utils/Tags/Nuxt";
-import Next from "./components/Common/Utils/Tags/Next";
-import Personnel from "./components/Common/Utils/Tags/Personnel";
 import Filter from "./components/Common/Utils/Filter/Filter";
-import Typescript from "./components/Common/Utils/Tags/Typescript";
-import Symfony from "./components/Common/Utils/Tags/Symfony";
+import { useState } from "react";
+import ProjectTable from "./components/Common/UI/ProjectCard/ProjectTable";
 
 export default function Home() {
-  // TODO Create project filter
+  const [activeTag, setActiveTag] = useState<string | null>(null);
+
+  // TODO for github api add percentage to Tags and fetch the percentage of used framework/code language
   return (
     <main>
       <Analytics />
       <WelcomeMessage />
       <section className="flex flex-col gap-50">
         <div id="aboutme" />
-        <AboutMe />
-        <Skills />
+        <AboutMe>
+          Je m`appelle Léo et j`ai commencé à m`intéresser au développement web
+          quand j`étais au lycée. J`ai donc appris avec des cours en ligne et en
+          libre accès, ce qui m`a permis d`acquérir les bases du développement
+          web. Après le lycée, je me suis tourné vers une formation en
+          développement web et web mobile, qui m`a permis d`obtenir un diplôme
+          bac+2, et quelques nuits blanches à rattraper.
+        </AboutMe>
+
+        <Skills
+          tags={[
+            "TailwindCSS",
+            "NextJS",
+            "NuxtJS",
+            "Bootstrap",
+            "CSS",
+            "HTML",
+            "Docker",
+            "Figma",
+            "Git",
+            "Github",
+            "Javascript",
+            "MySQL",
+            "PHP",
+            "React",
+            "Symfony",
+            "Typescript",
+            "VueJS",
+          ]}
+        />
+
+        {/* TODO Make a components for grouping filter and project card */}
+
         <div
           id="Projects"
           className="flex flex-col gap-10 self-center lg:w-3/4"
@@ -29,50 +59,26 @@ export default function Home() {
             - Mes projects -
           </h2>
 
-          {/* <Filter /> */}
+          <Filter activeTag={activeTag} setActiveTag={setActiveTag} />
 
           <div className="flex flex-wrap justify-center gap-5">
-            <ProjectCard
-              imageSrc="/img/portfolio-v1.png"
-              imageAlt="Image représentant la version 1 de mon portfolio"
-              projectName="Portfolio V1"
-              href="https://leo-portfolio-v1.vercel.app/"
-              projectDescription="La toute première version de mon portfolio."
-              dateStart="2024"
-              dateEnd="2025"
-            >
-              <TailwindCSS />
-              <Nuxt />
-              <Personnel />
-            </ProjectCard>
-            <ProjectCard
-              imageSrc="/img/MyWebGames.png"
-              imageAlt="Image représentant mon project"
-              projectName="MMOType & Pong"
-              href="https://github.com/Leo-ThomelinTual/my-web-games"
-              projectDescription="Ce projet regroupe un jeu de pong et un jeu où il faut taper des commandes précises pour récupérer des ressources et bien d'autres fonctionnalités à venir. Je travail actuellement sur ce projet, l'image de preview ci-dessus vient de l'ancienne version avec le Framework Nuxt je suis en train de réécrire le code avec NextJS, Typescript et Symfony pour les données."
-              dateStart="2025"
-              dateEnd="20xx"
-            >
-              <TailwindCSS />
-              <Typescript />
-              <Symfony />
-              <Next />
-              <Personnel />
-            </ProjectCard>
-            <ProjectCard
-              imageSrc="/img/portfolio-v2.png"
-              imageAlt="Image représentant la version 2 de mon portfolio"
-              projectName="Portfolio V2 (Actuelle)"
-              href="https://leo-portfolio-v2.vercel.app/"
-              projectDescription="La version 2 de mon portfolio celui où vous êtes actuellement."
-              dateStart="2025"
-              dateEnd="20xx"
-            >
-              <TailwindCSS />
-              <Next />
-              <Personnel />
-            </ProjectCard>
+            {ProjectTable.filter(
+              (project) => !activeTag || project.tags.includes(activeTag),
+            ).map((project) => (
+              <ProjectCard
+                key={project.Name}
+                projectName={project.Name}
+                projectDescription={project.Description}
+                imageSrc={project.imageSrc}
+                imageAlt={project.imageAlt}
+                websiteLink={project.websiteLink}
+                githubLink={project.githubLink}
+                isWorkingOn={project.isWorkingOn}
+                dateStart={project.dateStart}
+                dateEnd={project.dateEnd}
+                tags={project.tags}
+              />
+            ))}
           </div>
         </div>
       </section>
