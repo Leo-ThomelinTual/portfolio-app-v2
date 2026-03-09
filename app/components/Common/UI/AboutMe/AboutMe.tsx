@@ -4,14 +4,15 @@ type AboutMeProps = {
 
 const AboutMe = ({ children }: AboutMeProps) => {
   return (
-    <section className="relative mx-10 flex max-w-4xl flex-row flex-wrap justify-center md:px-10 lg:mx-auto">
+    <section className="relative max-w-4xl self-center px-5">
       <div className="absolute -top-100" id="AboutMe" />
-      <article className="relative h-max w-full rounded-r-md rounded-b-md border-2 bg-(--color-background) p-6 md:rounded-md md:p-10">
-        <h2 className="absolute -top-18.5 -left-0.5 h-max w-max rounded-t-md border-x-2 border-t-2 bg-(--color-background) px-3 py-4 text-4xl font-bold uppercase md:-top-11 md:-left-19 md:rounded-md md:border-2 md:px-5 md:py-7">
+
+      <article className="relative h-max w-full rounded-l-none rounded-r-md rounded-b-md border-2 border-(--color-border) bg-(--color-background) p-5 lg:rounded-md">
+        <h2 className="rounded-x-md absolute -top-15.5 -left-0.5 h-max w-max rounded-t-md border-x-2 border-t-2 border-(--color-border) bg-(--color-background) p-4 text-xl font-bold uppercase lg:-left-25 lg:rounded-md lg:border-2 lg:px-5 lg:py-7 lg:text-4xl">
           A propos de moi
         </h2>
 
-        <p className="md:indent-65">{children}</p>
+        <p className="text-sm lg:indent-65 lg:text-lg">{children}</p>
       </article>
     </section>
   );

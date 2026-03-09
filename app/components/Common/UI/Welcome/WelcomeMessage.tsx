@@ -68,11 +68,11 @@ const WelcomeMessage = () => {
   return (
     <section className="relative flex h-screen w-full flex-col justify-center gap-30">
       <article ref={titleContainer} className="mx-auto flex flex-col uppercase">
-        <div className="flex w-full flex-col px-10 md:px-0">
-          <h3 className="title text-3xl font-extrabold md:text-4xl">
+        <div className="flex w-full flex-col px-5 md:px-0">
+          <h3 className="title text-2xl font-extrabold md:text-4xl">
             👋 Léo Thomelin-Tual
           </h3>
-          <p className="flex items-center gap-3">
+          <p className="flex w-full items-center gap-3 text-sm md:w-full md:text-base">
             <Icon
               className="shrink-0"
               icon="material-symbols:location-on-outline-rounded"
@@ -81,7 +81,7 @@ const WelcomeMessage = () => {
             télétravail
           </p>
         </div>
-        <div className="relative flex w-max flex-col self-center font-extrabold">
+        <div className="flex w-max flex-col self-center text-xs font-extrabold sm:text-lg md:text-xl lg:text-base">
           <h2 className="titleWiggle titleFrontend title text-[4em] text-(--color-primary) lg:text-[10em] xl:text-[15em]">
             Je suis
           </h2>
@@ -94,8 +94,8 @@ const WelcomeMessage = () => {
         </div>
       </article>
 
-      <article className="xs:w-1/3 mx-10 flex flex-col gap-2 self-center text-justify md:w-2/3">
-        <p className="font-medium">
+      <article className="flex flex-col gap-2 self-center w-full px-5 md:px-0 text-sm md:w-1/2 md:text-justify md:text-lg">
+        <p>
           &gt; <strong>Développeur web/mobile junior Bac+2</strong>, curieux et
           motivé, avec une forte capacité d`adaptation et un bon esprit
           d`équipe. Autonome et rigoureux, je recherche une alternance ou un CDI

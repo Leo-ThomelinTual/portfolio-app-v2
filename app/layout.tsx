@@ -1,7 +1,7 @@
 import { JetBrains_Mono } from "next/font/google";
 import type { Metadata } from "next";
 
-import "./globals.css";
+import "./global.css";
 import Footer from "./components/Common/UI/Footer/Footer";
 import Topbar from "./components/Common/UI/Topbar/Topbar";
 
@@ -11,6 +11,7 @@ import ScrollIndicator from "./components/Common/Utils/ScrollIndicator/ScrollInd
 import PurpleBubble from "./components/Common/Utils/Bubbles/Purple";
 import BlueBubble from "./components/Common/Utils/Bubbles/Blue";
 import Navbar from "./components/Common/UI/Navbar/Navbar";
+import Head from "next/head";
 
 const jetbrains = JetBrains_Mono({
   variable: "--jetbrains-mono",
@@ -28,6 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html className={jetbrains.className} lang="fr">
+      <Head>
+        <meta name="viewport" content="viewport-fit=cover" />
+      </Head>
       <body>
         <Topbar />
         <ScrollIndicator />
