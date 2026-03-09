@@ -13,10 +13,8 @@ export default function Home() {
 
   // TODO for github api add percentage to Tags and fetch the percentage of used framework/code language
   // TODO add color to filter
-  // TODO change WORKING ON place
   // TODO add animation to Skills components
 
-  // ! FIXME Responsive text weird on phone
   return (
     <main>
       <Analytics />
