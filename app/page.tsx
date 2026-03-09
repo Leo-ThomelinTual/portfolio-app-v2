@@ -12,9 +12,11 @@ export default function Home() {
   const [activeTag, setActiveTag] = useState<string | null>(null);
 
   // TODO for github api add percentage to Tags and fetch the percentage of used framework/code language
-  // TODO add color to filter
+  // TODO add color to selected filter
   // TODO add animation to Skills components
-
+  // TODO adding effect to Card button
+  // TODO Make formular for sending email
+  
   return (
     <main>
       <Analytics />
