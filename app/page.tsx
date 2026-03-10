@@ -12,11 +12,11 @@ export default function Home() {
   const [activeTag, setActiveTag] = useState<string | null>(null);
 
   // TODO for github api add percentage to Tags and fetch the percentage of used framework/code language
-  // TODO add color to filter
-  // TODO change WORKING ON place
+  // TODO add color to selected filter
   // TODO add animation to Skills components
-
-  // ! FIXME Responsive text weird on phone
+  // TODO adding effect to Card button
+  // TODO Make formular for sending email
+  
   return (
     <main>
       <Analytics />
@@ -34,37 +34,38 @@ export default function Home() {
 
         <Skills
           tags={[
+            "HTML",
+            "CSS",
+            "Git",
+            "PHP",
+            "React",
+            "VueJS",
             "TailwindCSS",
             "NextJS",
             "NuxtJS",
             "Bootstrap",
-            "CSS",
-            "HTML",
             "Docker",
             "Figma",
-            "Git",
             "Github",
             "Javascript",
             "MySQL",
-            "PHP",
-            "React",
             "Symfony",
             "Typescript",
-            "VueJS",
           ]}
         />
 
         {/* TODO Make a components for grouping filter and project card */}
 
-        <div
-          id="Projects"
-          className="flex flex-col gap-10 self-center lg:w-3/4"
-        >
+        <div id="Projects" className="flex flex-col gap-10 self-center">
           <h2 className="flex self-center text-3xl font-bold uppercase">
             - Mes projects -
           </h2>
 
-          <Filter activeTag={activeTag} setActiveTag={setActiveTag} />
+          <Filter
+            className="px-5 md:w-[70em] md:self-center"
+            activeTag={activeTag}
+            setActiveTag={setActiveTag}
+          />
 
           <div className="flex flex-wrap justify-center gap-5">
             {ProjectTable.filter(
@@ -72,6 +73,8 @@ export default function Home() {
             ).map((project) => (
               <ProjectCard
                 key={project.Name}
+                asWebsite={project.asWebsite}
+                asGithub={project.asGithub}
                 projectName={project.Name}
                 projectDescription={project.Description}
                 imageSrc={project.imageSrc}

@@ -5,18 +5,19 @@ import Tags from "../Tags/Tags";
 type FilterProps = {
   activeTag: string | null;
   setActiveTag: React.Dispatch<React.SetStateAction<string | null>>;
+  className: string;
 };
 
-const Filter = ({ activeTag, setActiveTag }: FilterProps) => {
+const Filter = ({ activeTag, setActiveTag, className }: FilterProps) => {
   function handleFilter(tag: string) {
     setActiveTag(tag);
   }
   return (
-    <section className="flex w-full flex-col flex-wrap gap-2 px-10 md:px-20">
-      <p className="flex w-50 items-center gap-2 border-b-2 p-2">
+    <section className={`${className} flex flex-col flex-wrap gap-2`}>
+      <p className="flex items-center gap-2">
         Filtre <Icon icon="material-symbols:filter-list" />
       </p>
-      <article className="flex flex-wrap gap-2">
+      <article className="flex flex-wrap gap-2 border-t-2 pt-2">
         <Tags
           doExclude={true}
           onClick={() => setActiveTag(null)}

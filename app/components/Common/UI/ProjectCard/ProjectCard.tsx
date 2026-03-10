@@ -4,6 +4,7 @@ import styles from "./ProjectCard.module.css";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import Tags, { getIconFromTag } from "../../Utils/Tags/Tags";
+import Tertiary from "../../Utils/Buttons/Tertiary";
 
 type CardProps = {
   imageSrc: string;
@@ -19,6 +20,8 @@ type CardProps = {
   dateEnd: string;
 
   isWorkingOn: boolean;
+  asWebsite: boolean;
+  asGithub: boolean;
 
   tags: string[];
 };
@@ -33,25 +36,50 @@ const ProjectCard = ({
   websiteLink,
   githubLink,
   isWorkingOn,
+  asWebsite,
+  asGithub,
   tags,
 }: CardProps) => {
   return (
     <div
       id="card"
-      className={`${styles.case} group relative flex w-97.5 flex-col gap-2 rounded-xl border-2 border-(--color-border-muted) bg-(--transparency-background) p-3 hover:border-white md:w-112.5 md:gap-5 md:p-5`}
+      className={`${styles.case} group relative flex h-max w-97.5 flex-col gap-2 rounded-xl border-2 border-(--color-border-muted) bg-(--transparency-background) p-3 hover:border-white md:w-112.5 md:gap-5 md:p-5`}
     >
       <Link className="relative h-55 w-full" href={websiteLink}>
         <Image className="rounded-md" src={imageSrc} alt={imageAlt} fill />
       </Link>
 
-      {isWorkingOn ? (
-        <div
-          className={`${styles.isWorkingOn} transition-right ease absolute right-2 flex items-center gap-2 rounded-md border-2 border-(--success) bg-(--color-background) p-3 uppercase duration-500 md:group-hover:-right-30 md:group-hover:translate-z-15 md:group-hover:-rotate-y-50`}
-        >
-          Working on
-          <div className="h-max w-max rounded-md bg-(--success) p-1" />
-        </div>
-      ) : null}
+      <div className="flex gap-1">
+        {isWorkingOn ? (
+          <div className="flex items-center gap-2 select-none rounded-md border-2 border-(--success) bg-(--color-background) p-2 uppercase md:p-3">
+            Working on
+            <div className="h-max w-max rounded-md bg-(--success) p-1" />
+          </div>
+        ) : null}
+
+        <div className="mx-1 w-1 rounded-md bg-(--color-foreground)" />
+
+        {asWebsite ? (
+          <Link
+            href={websiteLink}
+            className="flex items-center gap-2 rounded-md border-2 bg-(--color-background) p-3 uppercase"
+          >
+            Website
+            <Icon icon="fa7-solid:external-link" />
+          </Link>
+        ) : null}
+        {asGithub ? (
+          <Link
+            href={githubLink}
+            className="flex items-center gap-2 rounded-md border-2 border-(--color-muted) bg-(--color-background) p-3 uppercase"
+          >
+            Github
+            <Icon icon="mdi:github" />
+          </Link>
+        ) : null}
+
+        <div className="ml-auto w-1 rounded-md bg-(--color-foreground)" />
+      </div>
 
       <div className="flex flex-col gap-4 md:gap-2">
         <h3 className="border-b border-(--color-border-muted) pb-2 text-2xl">
@@ -68,12 +96,6 @@ const ProjectCard = ({
         </p>
         <p>{projectDescription}</p>
       </div>
-      <Link
-        className="transition-gap ease flex items-center gap-2 duration-500 hover:gap-3"
-        href={githubLink}
-      >
-        Voir sur github <Icon icon="material-symbols:arrow-forward" />
-      </Link>
       <div className="flex flex-row flex-wrap gap-1">
         {tags.map((tag) => (
           <Tags key={tag} name={tag} icon={getIconFromTag(tag)} />

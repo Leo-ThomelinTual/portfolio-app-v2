@@ -1,6 +1,8 @@
 export const ProjectTable = [
   {
     isWorkingOn: false,
+    asWebsite: true,
+    asGithub: true,
     imageSrc: "/img/portfolio-v1.png",
     imageAlt: "Image représentant la version 1 de mon portfolio",
     Name: "Portfolio V1",
@@ -13,6 +15,8 @@ export const ProjectTable = [
   },
   {
     isWorkingOn: true,
+    asWebsite: false,
+    asGithub: true,
     imageSrc: "/img/MyWebGames.png",
     imageAlt: "Image représentant mon project",
     Name: "MMOType & Pong",
@@ -26,6 +30,8 @@ export const ProjectTable = [
   },
   {
     isWorkingOn: true,
+    asWebsite: true,
+    asGithub: true,
     imageSrc: "/img/portfolio-v2.png",
     imageAlt: "Image représentant la version 2 de mon portfolio",
     Name: "Portfolio V2 (Actuelle)",

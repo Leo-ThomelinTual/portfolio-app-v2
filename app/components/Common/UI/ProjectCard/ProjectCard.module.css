@@ -6,9 +6,4 @@
   .case:hover {
     transform: perspective(1000px) rotateY(10deg) scale(1.05);
   }
-
-  .isWorkingOn {
-    transition: all 0.5s ease;
-    transform-style: preserve-3d;
-  }
 }
