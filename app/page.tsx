@@ -16,7 +16,7 @@ export default function Home() {
   // TODO add animation to Skills components
   // TODO adding effect to Card button
   // TODO Make formular for sending email
-  
+
   return (
     <main>
       <Analytics />
