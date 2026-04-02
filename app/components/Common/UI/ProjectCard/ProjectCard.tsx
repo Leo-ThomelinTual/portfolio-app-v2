@@ -4,7 +4,6 @@ import styles from "./ProjectCard.module.css";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import Tags, { getIconFromTag } from "../../Utils/Tags/Tags";
-import Tertiary from "../../Utils/Buttons/Tertiary";
 
 type CardProps = {
   imageSrc: string;
@@ -51,7 +50,7 @@ const ProjectCard = ({
 
       <div className="flex gap-1">
         {isWorkingOn ? (
-          <div className="flex items-center gap-2 select-none rounded-md border-2 border-(--success) bg-(--color-background) p-2 uppercase md:p-3">
+          <div className="flex items-center gap-2 rounded-md border-2 border-(--success) bg-(--color-background) p-2 uppercase select-none md:p-3">
             Working on
             <div className="h-max w-max rounded-md bg-(--success) p-1" />
           </div>
