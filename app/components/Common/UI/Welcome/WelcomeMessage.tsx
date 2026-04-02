@@ -81,7 +81,7 @@ const WelcomeMessage = () => {
             télétravail
           </p>
         </div>
-        <div className="flex w-max flex-col self-center text-xs font-extrabold sm:text-lg md:text-xl lg:text-base">
+        <div className="flex w-max flex-col self-center text-xs font-extrabold select-none sm:text-lg md:text-xl lg:text-base">
           <h2 className="titleWiggle titleFrontend title text-[4em] text-(--color-primary) lg:text-[10em] xl:text-[15em]">
             Je suis
           </h2>
@@ -94,7 +94,7 @@ const WelcomeMessage = () => {
         </div>
       </article>
 
-      <article className="flex flex-col gap-2 self-center w-full px-5 md:px-0 text-sm md:w-1/2 md:text-justify md:text-lg">
+      <article className="flex w-full flex-col gap-2 self-center px-5 text-sm md:w-1/2 md:px-0 md:text-justify md:text-lg">
         <p>
           &gt; <strong>Développeur web/mobile junior Bac+2</strong>, curieux et
           motivé, avec une forte capacité d`adaptation et un bon esprit

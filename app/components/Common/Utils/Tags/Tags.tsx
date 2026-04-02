@@ -41,8 +41,8 @@ const Tags = ({ icon, name, doExclude, onClick }: TagsProps) => {
       aria-labelledby={`Compétence en ${name}`}
       className={
         doExclude
-          ? `transition-border ease flex h-10 w-max cursor-pointer items-center gap-2 rounded-md border-2 border-(--color-border-muted) bg-(--color-background) px-2 text-center duration-300 hover:border-(--color-border)`
-          : `transition-border ease flex h-10 w-max items-center gap-2 rounded-md border-2 border-(--color-border-muted) bg-(--color-background) px-2 text-center duration-300 select-none hover:border-(--color-border)`
+          ? `transition-border ease target flex h-10 w-max cursor-pointer items-center gap-2 rounded-md border-2 border-(--color-border-muted) bg-(--color-background) px-2 text-center duration-300 hover:border-(--color-border)`
+          : `transition-border ease target flex h-10 w-max items-center gap-2 rounded-md border-2 border-(--color-border-muted) bg-(--color-background) px-2 text-center duration-300 select-none hover:border-(--color-border)`
       }
     >
       <Icon fontSize={24} icon={icon} />
