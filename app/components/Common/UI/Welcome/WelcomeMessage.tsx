@@ -77,8 +77,7 @@ const WelcomeMessage = () => {
               className="shrink-0"
               icon="material-symbols:location-on-outline-rounded"
             />
-            Basé à Sarthe/Lombron - Mobile Pays de la loire / Ouvert au
-            télétravail
+            Basé à Sarthe/Lombron - Mobile Pays de la loire
           </p>
         </div>
         <div className="flex w-max flex-col self-center text-xs font-extrabold select-none sm:text-lg md:text-xl lg:text-base">
@@ -96,7 +95,7 @@ const WelcomeMessage = () => {
 
       <article className="flex w-full flex-col gap-2 self-center px-5 text-sm md:w-1/2 md:px-0 md:text-justify md:text-lg">
         <p>
-          &gt; <strong>Développeur web/mobile junior Bac+2</strong>, curieux et
+          &gt; <strong>Développeur web & web mobile junior Bac+2</strong>, curieux et
           motivé, avec une forte capacité d`adaptation et un bon esprit
           d`équipe. Autonome et rigoureux, je recherche une alternance ou un CDI
           pour développer mes compétences sur des projets réels.

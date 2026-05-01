@@ -42,26 +42,24 @@ const ProjectCard = ({
   return (
     <div
       id="card"
-      className={`${styles.case} group relative flex h-max w-97.5 flex-col gap-2 rounded-xl border-2 border-(--color-border-muted) bg-(--transparency-background) p-3 hover:border-white md:w-112.5 md:gap-5 md:p-5`}
+      className={`${styles.case} group relative flex h-140 w-97.5 flex-col gap-2 rounded-xl border-2 border-(--color-border-muted) bg-(--transparency-background) p-3 hover:border-white md:w-112.5 md:gap-3`}
     >
       <Link className="relative h-55 w-full" href={websiteLink}>
         <Image className="rounded-md" src={imageSrc} alt={imageAlt} fill />
       </Link>
 
-      <div className="flex gap-1">
+      <div className="flex justify-around gap-1">
         {isWorkingOn ? (
-          <div className="flex items-center gap-2 rounded-md border-2 border-(--success) bg-(--color-background) p-2 uppercase select-none md:p-3">
+          <div className="flex h-max items-center gap-2 rounded-md border-2 border-(--success) bg-(--color-background) p-2 uppercase select-none">
             Working on
             <div className="h-max w-max rounded-md bg-(--success) p-1" />
           </div>
         ) : null}
 
-        <div className="mx-1 w-1 rounded-md bg-(--color-foreground)" />
-
         {asWebsite ? (
           <Link
             href={websiteLink}
-            className="flex items-center gap-2 rounded-md border-2 bg-(--color-background) p-3 uppercase"
+            className="flex h-max items-center gap-2 rounded-md border-2 bg-(--color-background) p-2 uppercase"
           >
             Website
             <Icon icon="fa7-solid:external-link" />
@@ -70,17 +68,15 @@ const ProjectCard = ({
         {asGithub ? (
           <Link
             href={githubLink}
-            className="flex items-center gap-2 rounded-md border-2 border-(--color-muted) bg-(--color-background) p-3 uppercase"
+            className="flex h-max items-center gap-2 rounded-md border-2 border-(--color-muted) bg-(--color-background) p-2 uppercase"
           >
             Github
             <Icon icon="mdi:github" />
           </Link>
         ) : null}
-
-        <div className="ml-auto w-1 rounded-md bg-(--color-foreground)" />
       </div>
 
-      <div className="flex flex-col gap-4 md:gap-2">
+      <div className="flex flex-col gap-4 px-2 md:gap-2">
         <h3 className="border-b border-(--color-border-muted) pb-2 text-2xl">
           {projectName}
         </h3>
@@ -95,7 +91,7 @@ const ProjectCard = ({
         </p>
         <p>{projectDescription}</p>
       </div>
-      <div className="flex flex-row flex-wrap gap-1">
+      <div className="mt-auto flex flex-row flex-wrap gap-1">
         {tags.map((tag) => (
           <Tags key={tag} name={tag} icon={getIconFromTag(tag)} />
         ))}

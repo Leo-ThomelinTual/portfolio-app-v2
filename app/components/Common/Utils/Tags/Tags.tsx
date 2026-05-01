@@ -28,6 +28,7 @@ const tagIcons: Record<string, string> = {
   Personnel: "material-symbols:account-circle",
   Professionnel: "material-symbols:cases",
   NuxtJS: "devicon:nuxtjs",
+  Showcase: "mdi:show",
 };
 
 export function getIconFromTag(tag: string) {

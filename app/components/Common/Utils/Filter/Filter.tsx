@@ -26,6 +26,26 @@ const Filter = ({ activeTag, setActiveTag, className }: FilterProps) => {
         />
         <Tags
           doExclude={true}
+          onClick={() => handleFilter("Personnel")}
+          name="Personnel"
+          icon="material-symbols:account-circle"
+        />
+        <Tags
+          doExclude={true}
+          onClick={() => handleFilter("Professionnel")}
+          name="Professionnel"
+          icon="material-symbols:cases"
+        />
+        <Tags
+          doExclude={true}
+          onClick={() => handleFilter("Showcase")}
+          name="Showcase"
+          icon="mdi:show"
+        />
+      </article>
+      <article className="flex flex-wrap gap-2 pt-2">
+        <Tags
+          doExclude={true}
           onClick={() => handleFilter("TailwindCSS")}
           name="TailwindCSS"
           icon="devicon:tailwindcss"
@@ -89,18 +109,6 @@ const Filter = ({ activeTag, setActiveTag, className }: FilterProps) => {
           onClick={() => handleFilter("VueJS")}
           name="VueJS"
           icon="devicon:vuejs"
-        />
-        <Tags
-          doExclude={true}
-          onClick={() => handleFilter("Personnel")}
-          name="Personnel"
-          icon="material-symbols:account-circle"
-        />
-        <Tags
-          doExclude={true}
-          onClick={() => handleFilter("Professionnel")}
-          name="Professionnel"
-          icon="material-symbols:cases"
         />
       </article>
     </section>

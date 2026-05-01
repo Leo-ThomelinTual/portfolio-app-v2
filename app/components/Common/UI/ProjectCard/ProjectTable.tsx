@@ -34,14 +34,29 @@ export const ProjectTable = [
     asGithub: true,
     imageSrc: "/img/portfolio-v2.png",
     imageAlt: "Image représentant la version 2 de mon portfolio",
-    Name: "Portfolio V2 (Actuelle)",
+    Name: "Portfolio V2",
     githubLink: "https://github.com/Leo-ThomelinTual/portfolio-app-v2",
     websiteLink: "https://leo-portfolio-v2.vercel.app/",
     Description:
       "La version 2 de mon portfolio celui où vous êtes actuellement.",
     dateStart: "2025",
-    dateEnd: "20xx",
+    dateEnd: "2026",
     tags: ["TailwindCSS", "NextJS", "Personnel"],
+  },
+  {
+    isWorkingOn: false,
+    asWebsite: true,
+    asGithub: true,
+    imageSrc: "/img/spa.png",
+    imageAlt: "Image d'un site SPA bien être",
+    Name: "Site SPA bien être",
+    githubLink: "https://github.com/Leo-ThomelinTual/spa_massage",
+    websiteLink: "https://project-1-leo.vercel.app/",
+    Description:
+      "Un site que j'ai designer puis crée à la demande et indication d'une personne.",
+    dateStart: "20/03/2026",
+    dateEnd: "27/04/2026",
+    tags: ["TailwindCSS", "NextJS", "Showcase"],
   },
 ];
 
