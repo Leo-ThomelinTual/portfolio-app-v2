@@ -19,6 +19,7 @@ type CardProps = {
   dateEnd: string;
 
   isWorkingOn: boolean;
+  isFinished: boolean;
   asWebsite: boolean;
   asGithub: boolean;
 
@@ -35,6 +36,7 @@ const ProjectCard = ({
   websiteLink,
   githubLink,
   isWorkingOn,
+  isFinished,
   asWebsite,
   asGithub,
   tags,
@@ -42,17 +44,30 @@ const ProjectCard = ({
   return (
     <div
       id="card"
-      className={`${styles.case} group relative flex h-140 w-97.5 flex-col gap-2 rounded-xl border-2 border-(--color-border-muted) bg-(--transparency-background) p-3 hover:border-white md:w-112.5 md:gap-3`}
+      className={`${styles.case} group relative flex h-max w-97.5 flex-col gap-2 rounded-xl border-2 border-(--color-border-muted) bg-(--transparency-background) p-3 hover:border-white md:w-112.5 md:gap-3`}
     >
-      <Link className="relative h-55 w-full" href={websiteLink}>
-        <Image className="rounded-md" src={imageSrc} alt={imageAlt} fill />
+      <Link className="h-55 w-full" href={websiteLink}>
+        <Image
+          className="rounded-md"
+          src={imageSrc}
+          alt={imageAlt}
+          width={500}
+          height={500}
+        />
       </Link>
 
-      <div className="flex justify-around gap-1">
+      <div className="flex justify-around gap-1 py-2">
         {isWorkingOn ? (
           <div className="flex h-max items-center gap-2 rounded-md border-2 border-(--success) bg-(--color-background) p-2 uppercase select-none">
             Working on
             <div className="h-max w-max rounded-md bg-(--success) p-1" />
+          </div>
+        ) : null}
+
+        {isFinished ? (
+          <div className="flex h-max items-center gap-2 rounded-md border-2 border-(--color-border-muted) bg-(--color-background) p-2 uppercase select-none">
+            Finished
+            <div className="h-max w-max rounded-md bg-(--color-muted) p-1" />
           </div>
         ) : null}
 

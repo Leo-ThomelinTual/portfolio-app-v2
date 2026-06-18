@@ -1,7 +1,7 @@
-import WelcomeMessage from "./components/Common/UI/Welcome/WelcomeMessage";
-import AboutMe from "./components/Common/UI/AboutMe/AboutMe";
-import Skills from "./components/Common/UI/Skills/Skills";
-import Project from "./components/Common/UI/Project/Project";
+import WelcomeMessage from "./components/UI/Welcome/WelcomeMessage";
+import AboutMe from "./components/UI/AboutMe/AboutMe";
+import Skills from "./components/UI/Skills/Skills";
+import Project from "./components/UI/Project/Project";
 
 export default function Home() {
   return (

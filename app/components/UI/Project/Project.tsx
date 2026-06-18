@@ -32,6 +32,7 @@ const Project = () => {
             imageAlt={project.imageAlt}
             websiteLink={project.websiteLink}
             githubLink={project.githubLink}
+            isFinished={project.isFinished}
             isWorkingOn={project.isWorkingOn}
             dateStart={project.dateStart}
             dateEnd={project.dateEnd}

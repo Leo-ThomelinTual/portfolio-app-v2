@@ -3,17 +3,17 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 
 import "./globals.css";
-import Footer from "./components/Common/UI/Footer/Footer";
-import Topbar from "./components/Common/UI/Topbar/Topbar";
+import Footer from "./components/UI/Footer/Footer";
+import Topbar from "./components/UI/Topbar/Topbar";
 
 import { Suspense } from "react";
 import Loading from "./loading";
-import ScrollIndicator from "./components/Common/Utils/ScrollIndicator/ScrollIndicator";
-import PurpleBubble from "./components/Common/Utils/Bubbles/Purple";
-import BlueBubble from "./components/Common/Utils/Bubbles/Blue";
-import Navbar from "./components/Common/UI/Navbar/Navbar";
+import ScrollIndicator from "./components/Utils/ScrollIndicator/ScrollIndicator";
+import PurpleBubble from "./components/Utils/Bubbles/Purple";
+import BlueBubble from "./components/Utils/Bubbles/Blue";
+import Navbar from "./components/UI/Navbar/Navbar";
 import Head from "next/head";
-import Cursor from "./components/Common/Utils/Cursor/Cursor";
+import Cursor from "./components/Utils/Cursor/Cursor";
 
 const jetbrains = JetBrains_Mono({
   variable: "--jetbrains-mono",
