@@ -4,7 +4,6 @@ import { Analytics } from "@vercel/analytics/next";
 
 import "./globals.css";
 import Footer from "./components/UI/Footer/Footer";
-import Topbar from "./components/UI/Topbar/Topbar";
 
 import { Suspense } from "react";
 import Loading from "./loading";
@@ -36,7 +35,6 @@ export default function RootLayout({
       </Head>
       <body>
         <Cursor />
-        <Topbar />
         <ScrollIndicator />
 
         <Suspense fallback={<Loading />}>{children}</Suspense>

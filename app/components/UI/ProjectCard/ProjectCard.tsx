@@ -44,7 +44,7 @@ const ProjectCard = ({
   return (
     <div
       id="card"
-      className={`${styles.case} group relative flex h-max w-97.5 flex-col gap-2 rounded-xl border-2 border-(--color-border-muted) bg-(--transparency-background) p-3 hover:border-white md:w-112.5 md:gap-3`}
+      className={`${styles.case} group relative flex h-max w-97.5 flex-col gap-2 rounded-xl border-2 border-(--color-border-muted) bg-(--transparency-background) p-3 hover:border-white md:w-112.5 md:gap-5`}
     >
       <Link className="h-55 w-full" href={websiteLink}>
         <Image
@@ -56,7 +56,7 @@ const ProjectCard = ({
         />
       </Link>
 
-      <div className="flex justify-around gap-1 py-2">
+      <div className="flex justify-around">
         {isWorkingOn ? (
           <div className="flex h-max items-center gap-2 rounded-md border-2 border-(--success) bg-(--color-background) p-2 uppercase select-none">
             Working on

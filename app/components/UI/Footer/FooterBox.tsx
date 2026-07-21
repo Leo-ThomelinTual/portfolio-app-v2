@@ -9,7 +9,7 @@ type FooterBoxProps = {
 
 const FooterBox = ({ title, titleIcon, children }: FooterBoxProps) => {
   return (
-    <article className="flex w-full flex-col gap-3 rounded-md border-2 p-3 md:w-1/3 lg:w-1/4">
+    <article className="flex w-full flex-col gap-3 rounded-md bg-(--color-background) border-2 p-3 md:w-1/3 lg:w-1/4">
       <h2 className="flex items-center gap-2 self-center text-xl font-bold uppercase">
         {title} <Icon icon={titleIcon} />
       </h2>

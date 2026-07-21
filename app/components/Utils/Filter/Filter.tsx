@@ -80,11 +80,23 @@ const Filter = ({ activeTag, setActiveTag, className }: FilterProps) => {
           name="MySQL"
           icon="devicon:mysql"
         />
-        <Tags
+        {/*<Tags
           doExclude={true}
           onClick={() => handleFilter("PHP")}
           name="PHP"
           icon="devicon:php"
+        />*/}
+        <Tags
+          doExclude={true}
+          onClick={() => handleFilter("NodeJS")}
+          name="NodeJS"
+          icon="devicon:nodejs"
+        />
+        <Tags
+          doExclude={true}
+          onClick={() => handleFilter("ExpressJS")}
+          name="ExpressJS"
+          icon="devicon:express"
         />
         <Tags
           doExclude={true}
@@ -92,12 +104,12 @@ const Filter = ({ activeTag, setActiveTag, className }: FilterProps) => {
           name="React"
           icon="devicon:react"
         />
-        <Tags
+        {/*<Tags
           doExclude={true}
           onClick={() => handleFilter("Symfony")}
           name="Symfony"
           icon="mdi:symfony"
-        />
+        />*/}
         <Tags
           doExclude={true}
           onClick={() => handleFilter("Typescript")}

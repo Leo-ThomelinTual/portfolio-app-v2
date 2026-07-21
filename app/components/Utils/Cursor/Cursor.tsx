@@ -45,7 +45,7 @@ const Cursor = () => {
   });
 
   return (
-    <div className="cursor pointer-events-none fixed top-0 left-0 -z-1 h-15 w-15 rounded-full blur-2xl" />
+    <div className="cursor pointer-events-none invisible fixed top-0 left-0 -z-1 h-15 w-15 rounded-full blur-2xl md:visible" />
   );
 };
 

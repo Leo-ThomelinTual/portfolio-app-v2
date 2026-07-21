@@ -21,6 +21,8 @@ const tagIcons: Record<string, string> = {
   Javascript: "devicon:javascript",
   MySQL: "devicon:mysql",
   PHP: "devicon:php",
+  NodeJS: "devicon:nodejs",
+  ExpressJS: "devicon:expressjs",
   VueJS: "devicon:vuejs",
   Typescript: "devicon:typescript",
   Symfony: "mdi:symfony",
