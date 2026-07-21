@@ -26,7 +26,7 @@
     --color-shadow: rgb(109, 109, 109);
   }
 }
-
+/*
 @media (prefers-color-scheme: light) {
   :root {
     --color-background: #d9d9d9d9;
@@ -34,6 +34,17 @@
     --color-foreground: #0a0a0a;
     --color-border: black;
     --color-shadow: black;
+  }
+}*/
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+  --color-background: #0a0a0a;
+  --transparency-background: #0a0a0a40;
+  --color-foreground: #ededed;
+  --color-border: white;
+  --color-shadow: rgb(109, 109, 109);
   }
 }
 
