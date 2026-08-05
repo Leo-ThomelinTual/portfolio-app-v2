@@ -3,16 +3,15 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 
 import "./globals.css";
-import Footer from "./components/UI/Footer/Footer";
+import Footer from "./_components/UI/Footer/Footer";
 
 import { Suspense } from "react";
 import Loading from "./loading";
-import ScrollIndicator from "./components/Utils/ScrollIndicator/ScrollIndicator";
-import PurpleBubble from "./components/Utils/Bubbles/Purple";
-import BlueBubble from "./components/Utils/Bubbles/Blue";
-import Navbar from "./components/UI/Navbar/Navbar";
+import ScrollIndicator from "./_components/Utils/ScrollIndicator/ScrollIndicator";
+import Navbar from "./_components/UI/Navbar/Navbar";
 import Head from "next/head";
-import Cursor from "./components/Utils/Cursor/Cursor";
+import Cursor from "./_components/Utils/Cursor/Cursor";
+import Bubble from "./_components/Utils/Bubble/Bubble";
 
 const jetbrains = JetBrains_Mono({
   variable: "--jetbrains-mono",
@@ -20,7 +19,7 @@ const jetbrains = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Léo - Web portfolio",
-  description: "Web portfolio de Léo Thomelin-Tual | Développeur web junior.",
+  description: "Web portfolio de Léo Thomelin-Tual | Développeur web frontend et backend junior.",
 };
 
 export default function RootLayout({
@@ -40,10 +39,9 @@ export default function RootLayout({
         <Suspense fallback={<Loading />}>{children}</Suspense>
 
         <div className="hidden md:flex">
-          <PurpleBubble />
-          <BlueBubble />
+          <Bubble className="-right-40 -bottom-50 h-150 w-150 bg-(--color-primary)" />
+          <Bubble className="-left-40 -top-50 h-150 w-150 bg-purple-900" />
         </div>
-
         <Navbar />
         <Footer />
 
